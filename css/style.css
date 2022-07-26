@@ -477,6 +477,7 @@ h2 {
 /* =========== Contact =========== */
 .contact-info {
     padding-top: 40px;
+    text-align: center;
 }
 
 .contact-info-text {
@@ -682,6 +683,18 @@ h2 {
     .home-box {
         margin: 80px 20px 0 20px;
     }
+    .main-container .header-container {
+        height: auto;
+    }
+    .movie-card {
+        grid-template-rows: 1fr 1fr;
+    }
+    .contact-info {
+        margin: 80px 20px 0 20px;
+    }
+    .page-footer {
+        padding: 40px 20px;
+    }
 }
 
 @media screen and (max-width: 576px) {
@@ -689,4 +702,10 @@ h2 {
         max-width: 300px;
         max-height: 300px;
     }
+    .movie-card {
+        grid-template-rows: 3fr 2fr;
+    }
+}
+
+@media screen and (max-width: 480px) {
 }
