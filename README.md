@@ -3,7 +3,7 @@
 
 Feito como um Desafio das Aulas do Tech Academy da Startse, o objetivo é refatorar um site simples (Land Page) utilizando apenas HTML e CSS, fazendo uso das tags semânticas. o Desafio foi proposto no Módulo 04.
 
-Para visualizar a página clique [AQUI](https://jhonatancassante.github.io/)
+Para visualizar a página clique [AQUI](https://jhonatancassante.github.io/startse-desafio-01/)
 ## Documentação de cores
 
 | Cor               | Hexadecimal                                                |
@@ -17,4 +17,4 @@ Para visualizar a página clique [AQUI](https://jhonatancassante.github.io/)
 
 ## Etiquetas
 
-[![MIT License](https://img.shields.io/github/license/jhonatancassante/desafio-startse?style=plastic)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
+[![MIT License](https://img.shields.io/github/license/jhonatancassante/startse-desafio-01?style=plastic)](https://github.com/jhonatancassante/startse-desafio-01/blob/main/LICENSE.md)
