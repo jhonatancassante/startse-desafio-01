@@ -644,7 +644,7 @@ h2 {
         flex-direction: column;
         align-items: center;
         width: 100%;
-        height: calc(50vh - 80px);
+        height: 50vh;
         font-size: 2rem;
         padding-bottom: 10px;
         background-color: var(--primary-color);
@@ -663,7 +663,7 @@ h2 {
         left: 0;
         background-color: rgba(0, 0, 0, 0.75);
         width: 100%;
-        height: calc(50vh);
+        height: calc(50vh - 80px);
     }
     .movie-card {
         grid-template-columns: 100%;
