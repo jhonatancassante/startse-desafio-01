@@ -5,6 +5,8 @@ Feito como um Desafio das Aulas do Tech Academy da Startse, o objetivo é refato
 
 Para visualizar a página clique [AQUI](https://jhonatancassante.github.io/startse-desafio-01/)
 
+![Preview](/preview.jpg)
+
 ## Etiquetas
 
 [![MIT License](https://img.shields.io/github/license/jhonatancassante/startse-desafio-01?style=plastic)](https://github.com/jhonatancassante/startse-desafio-01/blob/main/LICENSE.md)
