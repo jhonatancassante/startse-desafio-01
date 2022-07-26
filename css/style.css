@@ -1,0 +1,553 @@
+/* =========== Google Fonts =========== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* =========== Variáveis =========== */
+:root {
+    /* =========== Colors =========== */
+    --primary-color: #00023b;
+    --secondary-color: #ffc500;
+    --tertiary-color: #420000;
+    --text-color: #181E20;
+    --text-color-secondary: #F2F4F5;
+    --bg-color: #F2F4F5;
+
+    /* =========== Hover Filter =========== */
+    --hover-filter: brightness(1.2);
+}
+
+/* =========== Base =========== */
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+/* ========================== Scrollbar CSS ========================== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #bfbfbf #000000;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #000000;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #bfbfbf;
+    border-radius: 10px;
+    border: 0px solid #ffffff;
+  }
+
+/* =========== Shared Class =========== */
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 80px;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
+
+.grid-container {
+    display: grid;
+    padding-top: 80px;
+}
+
+/* =========== Up Arrow =========== */
+.up-arrow {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    opacity: .8;
+}
+
+.up-arrow:hover {
+    opacity: 1;
+}
+
+.up-arrow a {
+    font-size: 2.5rem;
+    color: var(--primary-color)
+}
+
+/* =========== Header =========== */
+.main-header {
+    background-color: var(--primary-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+/* =========== Menu Container =========== */
+.menu-container {
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+/* =========== Logo =========== */
+.menu-container .logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: 0 30px;
+}
+
+.menu-container .logo img {
+    height: 50px;
+}
+
+.menu-container .logo img:hover {
+    filter: var(--hover-filter);
+}
+
+/* =========== Menu Nav =========== */
+.menu-nav {
+    display: flex;
+    position: relative;
+    align-items: center;
+    height: 100%;
+    margin: 0 30px;
+}
+
+.nav-list {
+    display: flex;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.nav-list .menu-item {
+    height: 100%;
+    margin-left: 30px;
+    overflow: hidden;
+
+}
+
+.nav-list .menu-item:first-child {
+    margin-left: 0;
+}
+
+.nav-list .menu-item a {
+    height: 100%;
+    color: var(--secondary-color);
+    transition: all 0.3s ease;
+}
+
+.nav-list .menu-item a:hover {
+    filter: var(--hover-filter);
+    text-decoration: underline 2px;
+}
+
+.nav-list .menu-item .submenu-nav {
+    position: absolute;
+    top: 50px;
+    width: auto;
+    height: 0;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 10px 20px;
+    transition: all .3s ease;
+    overflow: hidden;
+    display: none;
+}
+
+.nav-list .menu-item:hover .submenu-nav {
+    height: auto;
+    display: flex;
+}
+
+.nav-list .menu-item .submenu-nav .submenu-item {
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* =========== home =========== */
+.home-container {
+    position: relative;
+    height: 100vh;
+    padding-top: 80px;
+    background-image: url("/img/Star_Wars_Capa.jpg");
+    background-size: cover;
+    background-position: top center;
+}
+
+.home-box {
+    display: block;
+    position: absolute;
+    top: 80px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 30px;
+    border-radius: 30px;
+    overflow: hidden;
+    margin-top: 80px;
+}
+
+.home-box h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    animation: text-transform 2s;
+}
+
+.home-box p {
+    margin-bottom: 30px;
+    color: var(--text-color-secondary);
+    animation: text-transform 2s;
+}
+
+.home-box div {
+    display: inline-flex;
+}
+
+.home-box a {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+.home-box div:hover {
+    filter: var(--hover-filter);
+    animation: arrow-rotate 1s infinite;
+}
+
+/* =========== Main =========== */
+.main-container {
+    grid-template-columns: 100%;
+    justify-items: center;
+    width: 80%;
+}
+
+.main-container h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* =========== Dots Time Line =========== */
+.space-time {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+    height: 120px;
+}
+
+.time-dots {
+    width: 12px;
+    height: 12px;
+    border: 2px solid var(--secondary-color);
+    background-color: var(--tertiary-color);
+    border-radius: 50%;
+    align-self: center;
+    animation: time-dots-flow 2s infinite linear;
+    margin: 10px;
+}
+
+.time-dots:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.time-dots:nth-child(2) {
+    animation-delay: .5s;
+}
+
+.time-dots:nth-child(3) {
+    animation-delay: 1s;
+}
+
+/* =========== Movies Container =========== */
+.all-movies {
+    padding: 0;
+}
+
+/* =========== Movie Card =========== */
+.movie-card {
+    grid-template-columns: 50% 50%;
+    position: relative;
+    min-height: 200px;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 0;
+}
+
+.movie-card .ribbon {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 7px;
+    left: -50px;
+    width: 150px;
+    height: 30px;
+    overflow: hidden;
+    transform: rotate(-45deg);
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+.movie-info {
+    display: grid;
+    row-gap: 20px;
+    padding: 40px;
+    background: linear-gradient(60deg, var(--primary-color) 0%, var(--tertiary-color) 100%);
+    color: var(--text-color-secondary);
+}
+
+.movie-info h3 {
+    color: var(--secondary-color);
+    font-size: 1.9 rem;
+    font-weight: 500;
+}
+
+.movie-info p {
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-align: justify;
+}
+
+.movie-info details {
+    display: grid;
+
+}
+
+.movie-info summary {
+    width: 120px;
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.movie-info details span {
+    font-size: 0.9rem;
+}
+
+.movie-info details span a {
+    display: inline-flex;
+    color: var(--text-color-secondary);
+    transition: all ease .3s;
+    padding-top: 10px;
+}
+
+.movie-info details span a:hover {
+    color: var(--secondary-color);
+    text-decoration: dashed underline;
+    transform: translateX(10px);
+}
+
+.movie-info details span a i {
+    display: none;
+}
+
+.movie-info details span a:hover i {
+    display: initial;
+    margin-right: 10px;
+}
+
+.movie-info details span:nth-child(2) {
+    margin-top: 10px;
+}
+
+.movie-info summary:hover {
+    color: var(--secondary-color);
+    filter: drop-shadow(0 0 5px var(--secondary-color));
+}
+
+.movie-card .movie-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.movie-card .movie-img img {
+    position: absolute;
+    object-fit: cover;
+    min-width: 100%;
+    height: 100%;
+    filter: saturate(0);
+    opacity: 0.8;
+    transition: all .3s ease;
+}
+
+.movie-card:hover .movie-img img {
+    height: 130%;
+    width: 130%;
+    filter: saturate(1);
+    opacity: 1;
+}
+
+/* =========== About Me =========== */
+.about-container {
+    grid-template-columns: 100%;
+    width: 80%;
+}
+
+.about-me-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+    background: linear-gradient(60deg, var(--primary-color) 0%, var(--tertiary-color) 100%);
+    border: 5px solid var(--secondary-color);
+}
+
+.about-me-img img {
+    object-fit: cover;
+    height: 120%;
+    filter: saturate(0);
+    opacity: .8;
+}
+
+.about-info {
+    grid-template-columns: 50% 50%;
+    padding-top: 40px;
+}
+
+.about-me-text {
+    padding: 0 30px;
+    text-align: justify;
+    text-indent: 2cm;
+}
+
+.about-me-text p {
+    margin-bottom: 20px;
+}
+
+.about-container a {
+    color: var(--text-color);
+}
+
+.about-container a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.credits {
+    width: 100%;
+    font-size: .8rem;
+    text-align: center;
+}
+
+/* =========== Contact =========== */
+.contact-info {
+    padding-top: 40px;
+}
+
+.contact-info-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact-info-text a {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.contact-info-text a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.contact-info-text .icons {
+    font-size: 2rem;
+}
+
+.contact-info-text .icons i {
+    display: inline-block;
+    margin: 10px;
+}
+
+/* =========== Footer =========== */
+.page-footer {
+    width: 100%;
+    height: 240px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 40px;
+    text-align: center;
+    font-size: .8rem;
+}
+
+/* =========== Animations =========== */
+@keyframes text-transform {
+    0% {
+        transform: translateY(210px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes arrow-rotate {
+    0% {
+        transform: translateY(5px);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(5px);
+    }
+}
+
+@keyframes time-dots-flow {
+    0% {
+        width: 0;
+        height: 0;
+        margin: 15px;
+    }
+    50% {
+        width: 12px;
+        height: 12px;
+        margin: 10px;
+    }
+    100% {
+        width: 0;
+        height: 0;
+        margin: 15px;
+    }
+}
