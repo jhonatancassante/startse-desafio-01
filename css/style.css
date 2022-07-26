@@ -39,6 +39,12 @@ body {
     background-color: var(--bg-color);
 }
 
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+}
+
 /* ========================== Scrollbar CSS ========================== */
   /* Firefox */
   * {
@@ -111,6 +117,7 @@ body {
 
 /* =========== Menu Container =========== */
 .menu-container {
+    position: relative;
     justify-content: space-between;
     padding: 0 20px;
 }
@@ -132,6 +139,12 @@ body {
 }
 
 /* =========== Menu Nav =========== */
+.menu-container #checkbox-menu,
+.menu-container .menu-burger,
+.menu-container .white-space-menu {
+    display: none;
+}
+
 .menu-nav {
     display: flex;
     position: relative;
@@ -249,12 +262,6 @@ body {
     width: 80%;
 }
 
-.main-container h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    text-align: center;
-}
-
 /* =========== Dots Time Line =========== */
 .space-time {
     display: flex;
@@ -296,7 +303,6 @@ body {
 .movie-card {
     grid-template-columns: 50% 50%;
     position: relative;
-    min-height: 200px;
     border-radius: 20px;
     overflow: hidden;
     padding: 0;
@@ -416,6 +422,12 @@ body {
     width: 80%;
 }
 
+.about-info {
+    grid-template-columns: 50% 50%;
+    justify-items: center;
+    padding-top: 40px;
+}
+
 .about-me-img {
     display: flex;
     justify-content: center;
@@ -423,10 +435,11 @@ body {
     position: relative;
     overflow: hidden;
     border-radius: 50%;
-    width: 500px;
-    height: 500px;
+    max-width: 500px;
+    max-height: 500px;
     background: linear-gradient(60deg, var(--primary-color) 0%, var(--tertiary-color) 100%);
     border: 5px solid var(--secondary-color);
+    margin: 20px;
 }
 
 .about-me-img img {
@@ -434,11 +447,6 @@ body {
     height: 120%;
     filter: saturate(0);
     opacity: .8;
-}
-
-.about-info {
-    grid-template-columns: 50% 50%;
-    padding-top: 40px;
 }
 
 .about-me-text {
@@ -549,5 +557,122 @@ body {
         width: 0;
         height: 0;
         margin: 15px;
+    }
+}
+
+@media screen and (max-width: 986px) {
+    .flex-container {
+        width: 100%;
+    }
+    .main-container {
+        width: 100%;
+        padding: 80px 20px 0 20px
+    }
+    .about-container {
+        width: 100%;
+        padding: 80px 20px 0 20px
+    }
+    .about-me-img {
+        max-width: 400px;
+        max-height: 400px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu-nav {
+        display: none;
+    }
+    #checkbox-menu {
+        position: absolute;
+        opacity: 0;
+    }
+    .menu-container .menu-burger {
+        cursor: pointer;
+        position: relative;
+        display: block;
+        height: 22px;
+        width: 30px;
+    }
+    .menu-burger span {
+        position: absolute;
+        display: block;
+        height: 3px;
+        width: 100%;
+        background-color: var(--bg-color);
+        border-radius: 30px;
+        transition: .25s ease-in-out;
+    }
+
+    .menu-burger span:nth-child(1) {
+        top: 0px;
+    }
+    .menu-burger span:nth-child(2) {
+        top: 8px;
+    }
+    .menu-burger span:nth-child(3) {
+        top: 16px;
+    }
+    #checkbox-menu:checked ~ .menu-burger span:nth-child(1)  {
+        top: 8px;
+        transform: rotate(-45deg);
+    }
+    #checkbox-menu:checked ~ .menu-burger span:nth-child(2)  {
+        display: none;
+    }
+    #checkbox-menu:checked ~ .menu-burger span:nth-child(3)  {
+        top: 8px;
+        transform: rotate(45deg);
+    }
+    #checkbox-menu:checked ~ .menu-nav {
+        display:flex;
+        position: absolute;
+        align-items: flex-start;
+        right: 0;
+        top: 80px;
+        height: calc(100vh - 80px);
+        width: 100%;
+        margin: 0;
+    }
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: calc(50vh - 80px);
+        font-size: 2rem;
+        padding-bottom: 10px;
+        background-color: var(--primary-color);
+    }
+    .nav-list .menu-item {
+        margin-left: 0;
+        padding-bottom: 10px;
+    }
+    .nav-list .menu-item:hover .submenu-nav {
+        display: none;
+    }
+    #checkbox-menu:checked ~ .white-space-menu {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.75);
+        width: 100%;
+        height: calc(50vh);
+    }
+    .movie-card {
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 2fr;
+        min-height: 400px;
+    }
+    .about-info {
+        grid-template-columns: 100%;
+    }
+    .about-me-text {
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .home-box {
+        margin: 80px 20px 0 20px;
     }
 }
