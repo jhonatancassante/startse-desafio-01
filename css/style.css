@@ -197,7 +197,7 @@ body {
     position: relative;
     height: 100vh;
     padding-top: 80px;
-    background-image: url("./img/Star_Wars_Capa.jpg");
+    background-image: url("../img/Star_Wars_Capa.jpg");
     background-size: cover;
     background-position: top center;
 }
