@@ -155,6 +155,7 @@
     }
 
     .page-footer {
+        height: 360px;
         padding: 40px 20px;
     }
 }
