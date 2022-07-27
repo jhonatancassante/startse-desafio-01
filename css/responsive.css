@@ -4,6 +4,14 @@
         width: 100%;
     }
 
+    .section-header {
+        width: 90%;
+    }
+
+    .movies-container .movie-card {
+        margin: 0 20px;
+    }
+
     .about-info .about-me-img {
         max-width: 350px;
         max-height: 350px;
