@@ -14,7 +14,7 @@
     /* =========== Hover Filter =========== */
     --hover-filter: brightness(1.2);
     --box-shadow: 0 0 8px #0f0f0f,
-    0 0 8px #191919;
+        0 0 8px #191919;
 }
 
 /* =========== Base =========== */
@@ -263,11 +263,20 @@ h3 {
 /* =========== Time Line =========== */
 #main #time-line {
     grid-template-columns: 100%;
+    width: 100%;
 }
 
 #time-line .movies-container {
     grid-template-columns: 100%;
     padding: 0;
+}
+
+.section-header {
+    display: block;
+    width: 100%;
+    border-bottom: 6px double var(--secondary-color);
+    background-color: var(--bg-color);
+    padding-top: 10px;
 }
 
 /* =========== Dots Time Line =========== */
@@ -333,7 +342,7 @@ h3 {
     display: grid;
     row-gap: 20px;
     padding: 40px;
-    background: linear-gradient(60deg, var(--secondary-color) 0%, var(--tertiary-color) 100%);
+    background: linear-gradient(60deg, var(--secondary-color) 40%, var(--tertiary-color) 100%);
     color: var(--text-color-secondary);
 }
 
@@ -426,7 +435,7 @@ h3 {
     border-radius: 50%;
     max-width: 400px;
     max-height: 400px;
-    background: linear-gradient(60deg, var(--secondary-color) 0%, var(--tertiary-color) 100%);
+    background: linear-gradient(60deg, var(--secondary-color) 40%, var(--tertiary-color) 100%);
     border: 5px solid var(--primary-color);
     margin: 20px;
     box-shadow: var(--box-shadow);
@@ -460,6 +469,11 @@ h3 {
 }
 
 /* =========== Contact =========== */
+#contact {
+    grid-template-columns: 100%;
+    width: 100%;
+}
+
 #contact .contact-info {
     grid-template-columns: 100%;
     text-align: center;
