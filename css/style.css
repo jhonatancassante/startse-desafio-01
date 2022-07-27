@@ -103,7 +103,7 @@ h3 {
 
 .up-arrow a {
     font-size: 2.5rem;
-    color: var(--primary-color)
+    color: var(--tertiary-color);
 }
 
 /* =========== Header =========== */
