@@ -3,13 +3,14 @@
     #main {
         width: 100%;
     }
-
-    .section-header {
-        width: 90%;
+    
+    .container-grid {
+        padding: 80px 20px 0 20px;
     }
 
-    .movies-container .movie-card {
-        margin: 0 20px;
+    #about-me .about-info {
+        padding: 0;
+        padding-top: 80px;
     }
 
     .about-info .about-me-img {
@@ -133,7 +134,13 @@
     .movies-container .movie-card {
         grid-template-columns: 100%;
         grid-template-rows: 2fr 3fr;
-        min-height: 400px;
+        max-width: 100%;
+    }
+
+    .movie-card .movie-info {
+        padding: 20px;
+        padding-top: 35px;
+        padding-left: 35px;
     }
 
     #about-me .about-info {
@@ -188,5 +195,9 @@
 @media screen and (max-width: 420px) {
     .movies-container .movie-card {
         grid-template-rows: 4fr 3fr;
+    }
+    .about-info .about-me-img {
+        max-width: 250px;
+        max-height: 250px;
     }
 }
