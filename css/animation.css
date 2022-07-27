@@ -279,3 +279,47 @@
     }
 }
 
+/* =========== Old Animations That I Made =========== */
+/*
+@keyframes text-transform {
+    0% {
+        transform: translateY(210px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes arrow-rotate {
+    0% {
+        transform: translateY(5px);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(5px);
+    }
+}
+
+@keyframes time-dots-flow {
+    0% {
+        width: 0;
+        height: 0;
+        margin: 15px;
+    }
+    50% {
+        width: 12px;
+        height: 12px;
+        margin: 10px;
+    }
+    100% {
+        width: 0;
+        height: 0;
+        margin: 15px;
+    }
+}
+*/
