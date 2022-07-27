@@ -1,7 +1,7 @@
 
 # Linha do Tempo de Star Wars
 
-Feito como um Desafio das Aulas do Tech Academy da Startse, o objetivo é refatorar um site simples (Land Page) utilizando apenas HTML e CSS, fazendo uso das tags semânticas. o Desafio foi proposto no Módulo 04.
+Feito como um Desafio das Aulas do Tech Academy da Startse, o objetivo era fazer um site simples (Land Page) utilizando apenas HTML e CSS, fazendo uso das tags semânticas. O Desafio foi proposto no Módulo 04.
 
 Para visualizar a página clique [AQUI](https://jhonatancassante.github.io/startse-desafio-01/)
 
